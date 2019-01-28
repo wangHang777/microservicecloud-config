@@ -1,0 +1,40 @@
+spring:
+  profiles:
+    active: dev
+
+---
+server:
+  port: 8201
+spring:
+  profiles: dev 
+  application:
+    name: microservicecloud-config-client 
+    
+eureka:
+  client:
+    # 当前服务是否注册到注册中心
+    #register-with-eureka: true
+    # true 启动 抛出异常 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+    # 此客户端是否获取eureka服务器注册表上的注册信息
+    #fetch-registry: true
+    service-url:
+      defaultZone: http://eureka.dev.com:7001/eureka/
+---
+
+
+server:
+  port: 8202
+spring:
+  profiles: test 
+  application:
+    name: microservicecloud-config-client 
+    
+eureka:
+  client:
+    # 当前服务是否注册到注册中心
+    #register-with-eureka: true
+    # true 启动 抛出异常 com.netflix.discovery.shared.transport.TransportException: Cannot execute request on any known server
+    # 此客户端是否获取eureka服务器注册表上的注册信息
+    #fetch-registry: true
+    service-url:
+      defaultZone: http://eureka.test.com:7001/eureka/
