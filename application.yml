@@ -6,9 +6,9 @@
 spring:
   profiles: dev  #正式环境
   application:
-    name:microservicecloud-config-atgugui-dev
+    name:microservicecloud-config-atgugui-dev 
 ---
 spring:
   profiles: test  #测试环境
   application:
-    name:microservicecloud-config-atgugui-test
+    name:microservicecloud-config-atgugui-test 
